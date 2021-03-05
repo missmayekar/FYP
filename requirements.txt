@@ -3,3 +3,4 @@ gunicorn
 Image
 Flask
 numpy 
+tensorflow
