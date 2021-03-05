@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Lung Cancer Detection</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+    <link href="{{ url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet">
+ 
+
+    <!--<link href="../static/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="../static/style.css" rel="stylesheet">-->
+
+    <script>
+    var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0])
+    };
+    </script>
+</head>
+
+<body>
+
+  <nav class="custom-navmenu">
+    <div class="container">
+      <p class="navbar-brand">Lung Cancer Detection</p>
+    </div>
+  </nav>
+
+  <main id="main">
+   <section class="section">
+      <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+                <h4 class="h3 ">Upload a photo for testing.</h4>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-5 center">
+              <!--src = "../static/Start-Up - Jang Yeong-sil (K-Drama) Sticker.jpg"-->
+
+            <!--<img id="output" class= "col-12 col-sm-6 col-md-6 col-lg-5 mx-auto d-block" />-->
+
+            <div>
+                <img id="output" class= "col-12 col-sm-6 col-md-6 col-lg-5 mx-auto d-block" />
+            </div>
+
+              <form method="post" enctype="multipart/form-data">
+                <input type="file" name="image" id="file" accept="image/*" onchange="loadFile(event)">
+                <input type="submit" value="Predict" class = "btn btn-success" id = "button"><br><br>
+              </form>
+
+          </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+            </div>
+        </div>
+
+          <div class="row">
+
+          <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+            
+            
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-8 center">
+                        
+              <div class="container">
+                  
+                <table class = "table table-bordered ">
+                    <tr>
+                        <td></td>
+                        <td>Probability of having tumor</td>
+                        <td>Probability of having no tumor tissue</td>
+                    </tr>  
+                    <tr>
+                        <td>Prediction</td>
+                        <td>{{prediction[0][0]}}</td>
+                        <td>{{prediction[0][1]}}</td>
+                    </tr>
+                  
+                </table>
+
+              </div>
+              
+              
+              
+              
+            </div>
+            
+            
+          <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+            
+          </div>
+            
+            
+            
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  
+</body>
+
+</html>

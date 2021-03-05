@@ -1,0 +1,46 @@
+
+
+body {
+  font-family: "Inconsolata", monospace;
+  color: #0d1e2d;
+}
+
+h4 {
+  font-family: "Raleway", sans-serif;
+   font-size: 16px;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.custom-navmenu {
+  background: #0d1e2d;
+  font-size: 20px;
+  color: #fff;
+}
+
+.custom-navmenu .custom-menu  {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0 !important;
+  text-decoration: none;
+}
+
+
+@media (max-width: 780px) {
+  .custom-navbar > .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+   color: white;
+}
+
+
