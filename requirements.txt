@@ -2,5 +2,4 @@ keras
 gunicorn
 Image
 Flask
-os
 numpy 
