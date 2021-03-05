@@ -1,0 +1,16 @@
+pyyaml
+scipy>=0.14
+django
+six
+Werkzeug>=0.15
+Jinja2>=2.10.1
+itsdangerous>=0.24
+click>=5.1
+grpcio~=1.32.0
+termcolor~=1.1.0
+astunparse~=1.6.3
+opt-einsum~=3.3.0
+absl-py~=0.10
+wrapt~=1.12.1
+tensorboard~=2.4
+wheel~=0.35
