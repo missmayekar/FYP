@@ -12,7 +12,7 @@ from keras.initializers import glorot_uniform
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = "C:\\Neha\\FYP-main\\static"
+UPLOAD_FOLDER = "static"
 
 @app.route("/", methods = ["GET", "POST"])
 def upload():
@@ -21,13 +21,13 @@ def upload():
         if imagefile:
             im = Image.open(imagefile)
             im = im.resize((96, 96))
-            im.save(r'C:\\Neha\\FYP-main\\static\\test.tif')
+            im.save(r'static\\test.tif')
 
             image_location = os.path.join(UPLOAD_FOLDER, 'test.tif')
 
 
             with CustomObjectScope({'GlorotUniform': glorot_uniform()}):
-                new_model = keras.models.load_model("C:\\Neha\\FYP-main\\CNN_KaggleModel_18-0.94.hdf5")
+                new_model = keras.models.load_model("CNN_KaggleModel_18-0.94.hdf5")
 
             test_image = keras.preprocessing.image.load_img(image_location)
             test_image = image.img_to_array(test_image)
